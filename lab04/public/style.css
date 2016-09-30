@@ -1,0 +1,173 @@
+body {
+	font-size: 16px;
+	font-family: "Arial Black", Gadget, sans-serif;
+	background-color: #99AAFF;
+	background-image: url("/static/flower.png");
+	background-attachment: fixed;
+	background-position: right bottom;
+	background-repeat: no-repeat;
+	background-size: 80px 100px;
+	counter-reset: headnum;
+}
+
+#cleared {
+	clear: left;
+}
+
+p {
+	color: #004477;
+}
+p:before {
+	content: url("/static/pin.png");
+}
+#first {
+	font-style: italic;
+	float: left;
+}
+
+#second {
+	float: left;
+}
+
+strong { 
+	color: #CC3355;
+	font-size: 200%;
+	font-family: serif;
+	background-color: #99DDFF;
+}
+.spinach {
+	color: #005500;
+	background-color: #99DDFF;
+}
+
+#oceans {
+	clear: left;
+}
+
+#tableh3 {
+	clear: left;
+}
+
+ul, #numbered {
+	border: 10px dashed #99CCEE;
+	width: 75px;
+	float: left;
+	margin: 20px;
+}
+
+#numbered {
+	width: 200px;
+}
+
+#numpar, #oc {
+	float: left;
+}
+
+li {
+	list-style: lower-roman;
+	margin-bottom: 8px;
+}
+
+ol {
+	list-style-type: none;
+}
+li.num:before {
+	content: "(" counter(section, upper-alpha) ") ";
+}
+li.num {
+	counter-increment: section;
+	list-style-type: none;
+}
+
+#fixed-pin  {
+  position:fixed;
+  top: 3px;
+  right: 3px;
+}
+
+
+/*** Style for doc3.html (Tables) ***/
+
+#demo-table {
+  font: 100% sans-serif;
+  background-color: #efe;
+  border-collapse: collapse;
+  empty-cells: show;
+  border: 1px solid #7a7;
+	clear: left;
+}
+
+#demo-table > caption {
+  text-align: right;
+  font-size: 100%;
+	font-style: italic;
+  border-top: .2em solid #99CCEE;
+  margin-top: .5em;
+	caption-side: bottom;
+}
+
+
+/* basic shared rules */
+#demo-table th,
+#demo-table td {
+  text-align: right;
+  padding-right: .5em;
+}
+
+#demo-table th {
+  font-weight: bold;
+  padding-left: .5em;
+}
+
+
+/* header */
+#demo-table > thead > tr:first-child > th {
+  text-align: center;
+  color: blue;
+}
+
+#demo-table > thead > tr + tr > th {
+  font-style: italic;
+  color: gray;
+}
+
+/* fix size of superscript */
+#demo-table sup {
+  font-size: 75%;
+}
+
+/* body */
+#demo-table td {
+  background-color: #cef;
+  padding:.5em .5em .5em 3em;
+}
+
+#demo-table tbody th:after {
+  content: ":";
+}
+
+#demo-table tbody td {
+  border:1px solid #7a7;
+}
+
+
+/* footer */
+#demo-table tfoot {
+  font-weight: bold;
+}
+
+#demo-table tfoot th {
+  color: blue;
+}
+
+#demo-table tfoot th:after {
+  content: ":";
+}
+
+#demo-table > tfoot td {
+  background-color: #cee;
+}
+
+#demo-table > tfoot > tr:first-child td {
+  border-top: .2em solid #7a7;
+}
