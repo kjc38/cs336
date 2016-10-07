@@ -1,0 +1,62 @@
+// Yellow background variable
+yback = #ccccff
+// Border Style as most of the borders are the same
+border-style = solid #25383C
+
+// body
+body
+	font: 24px Helvetica
+	background: #999999
+
+// main content
+#main
+	min-height: 500px
+	padding: 20px
+	display: flex
+	flex-flow: row
+ 
+	article
+		border: 1px border-style
+		background: #dddd88
+		flex: 3 1 60%
+		order: 2
+
+	nav
+		border: 2px border-style
+		background: yback
+        	flex: 1 6 20%
+        	order: 1
+		text-align: right
+  
+	aside
+        	border: 2px border-style
+        	background: yback
+        	flex: 1 6 20%
+        	order: 3
+		font-style: italic
+
+// header and footer styles
+header, footer
+        display: block
+        min-height: 100px
+        border: 2px 
+        background: #ffeebb
+
+header
+	font-size: 200%	
+ 	font-family: "Lucinda Console", Manaco, monospace
+
+// when on a small device/screen
+@media all and (max-width: 640px) {
+	#main, #page
+		flex-direction: column
+  
+	#main > nav, #main > aside, header, footer
+		min-height: 50px
+		max-height: 50px
+		font-size: 16px
+
+	header
+		font-size: 150%
+	#main > nav
+		text-align: left
