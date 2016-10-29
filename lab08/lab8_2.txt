@@ -1,0 +1,4 @@
+a.i. The UI is composable if it can incorporate different parts into a cohesive unit. Using composable UI, you can reuse separate parts of code without repeating yourself.
+ii. JSX adds XML-looking syntax to JS.
+iii.
+iv. "Props" are the properties on a certain (in our case "Comment") component. This allows for the accessing of passed data. Props are immutable - they are passed from their parent and owned by their parent. "States" are private to their own compenent - they are mutable. When "state" updates, it re-renders itself.
