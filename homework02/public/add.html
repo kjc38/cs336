@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Add Person</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	</head>
+	<body>
+		<h1>Add a Person</h1>
+		<script src="/static/add.js"></script>
+		<form action="/people" method="post">
+			<div>
+				<label for="id">ID:</label>
+				<input type="text" id="id" name="login">
+			</div>
+			<div>
+				<label for="firstName">First Name:</label>
+				<input type="text" id="firstName" name="first">
+			</div>
+			<div>
+				<label for="lastName">Last Name:</label>
+				<input type="text" id="lastName" name="last">
+			</div>
+			<div>
+				<label for="startDate">Start:</label>
+				<input type="text" id="startDate" name="start">
+			</div>
+			<div class="button">
+				<button type="submit">Add</button>
+			</div>
+		</form>
+	</body>
+</html>

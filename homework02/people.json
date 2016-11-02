@@ -1,0 +1,26 @@
+[
+    {
+        "login": "ld1",
+        "first": "Laxus",
+        "last": "Dreyar",
+        "start": "2006/03/12"
+    },
+    {
+        "login": "fj1",
+        "first": "Freed",
+        "last": "Justine",
+        "start": "2009/05/03"
+    },
+    {
+        "login": "lh1",
+        "first": "Lucy",
+        "last": "Heartfilia",
+        "start": "2016/03/10"
+    },
+    {
+        "login": "gf1",
+        "first": "Gray",
+        "last": "Fullbuster",
+        "start": "2007/07/07"
+    }
+]
