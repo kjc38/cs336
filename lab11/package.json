@@ -32,6 +32,7 @@
   "scripts": {
     "build": "webpack --progress",
     "dev": "node server.js & webpack-dev-server --progress",
+    "install": "webpack --progress --config ./webpack.production.config.js",
     "start": "node server.js"
   },
   "repository": {
