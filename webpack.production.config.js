@@ -16,16 +16,18 @@ module.exports = {
 			{ test: /\.css$/,  loader: 'style!css?modules!postcss' }
 		]
 	},
-	plugins: [
-		new HtmlWebpackPlugin({template: __dirname + "/app/index.tmpl.html"}),
-		new webpack.HotModuleReplacementPlugin()
+	postcss: [
+		require('autoprefixer')
 	],
-    devServer: {
-        port: 3001,
-        proxy: { '/api/*': 'http://localhost:3000' },
-        colors: true,
-        historyApiFallback: true,
-        inline: true,
-        hot: true
-    }
+	plugins: [
+		new webpack.DefinePlugin({
+			'progress.env':{
+				'NODE_ENV': JSON.stringify('production')
+			}
+		}),
+		new HtmlWebpackPlugin({template: __dirname + "/app/index.tmpl.html"}),
+		new webpack.optimize.OccurenceOrderPlugin(),
+		new webpack.optimize.UglifyJsPlugin(),
+		new ExtractTextPlugin("[name]-[hash].css")
+	]
 };
