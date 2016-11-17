@@ -26,10 +26,7 @@ app.use('/', express.static(path.join(__dirname, 'dist')));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
-MongoClient.connect('mongodb://admin:bjarne@ds135577.mlab.com:35577/cs336', function (err, dbConnection){
-	if (err) throw err;
-	
-	db = dbConnection;
+var mongoVar = 'mongodb://admin:' + process.env.PASSWORD + '@ds135577.mlab.com:35577/cs336';
 
 // Additional middleware which will set headers that we need on each request.
 app.use(function(req, res, next) {
