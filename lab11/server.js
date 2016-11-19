@@ -26,7 +26,7 @@ app.use('/', express.static(path.join(__dirname, 'dist')));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
-var mongoVar = 'mongodb://admin:' + process.env.PASSWORD + '@ds135577.mlab.com:35577/cs336';
+var mongoVar = 'mongodb://admin:' + process.env.MONGO_PASSWORD + '@ds135577.mlab.com:35577/cs336';
 
 MongoClient.connect(mongoVar, function (err, dbConnection){
 	if (err) throw err;
